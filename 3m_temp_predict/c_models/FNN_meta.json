@@ -1,0 +1,254 @@
+{
+  "model": "FNN",
+  "layers": [
+    {
+      "index": 0,
+      "name": "flatten",
+      "class": "Flatten",
+      "config": {
+        "name": "flatten",
+        "trainable": true,
+        "dtype": {
+          "module": "keras",
+          "class_name": "DTypePolicy",
+          "config": {
+            "name": "float32"
+          },
+          "registered_name": null
+        },
+        "data_format": "channels_last"
+      },
+      "skipped": true
+    },
+    {
+      "index": 1,
+      "name": "dense_3",
+      "class": "Dense",
+      "config": {
+        "name": "dense_3",
+        "trainable": true,
+        "dtype": {
+          "module": "keras",
+          "class_name": "DTypePolicy",
+          "config": {
+            "name": "float32"
+          },
+          "registered_name": null
+        },
+        "units": 128,
+        "activation": "relu",
+        "use_bias": true,
+        "kernel_initializer": {
+          "module": "keras.initializers",
+          "class_name": "GlorotUniform",
+          "config": {
+            "seed": null
+          },
+          "registered_name": null
+        },
+        "bias_initializer": {
+          "module": "keras.initializers",
+          "class_name": "Zeros",
+          "config": {},
+          "registered_name": null
+        },
+        "kernel_regularizer": null,
+        "bias_regularizer": null,
+        "kernel_constraint": null,
+        "bias_constraint": null
+      },
+      "kernel_var": "FNN_dense_3_kernel_data",
+      "kernel_shape": [
+        60,
+        128
+      ],
+      "bias_var": "FNN_dense_3_bias_data",
+      "bias_shape": [
+        128
+      ]
+    },
+    {
+      "index": 2,
+      "name": "dropout_3",
+      "class": "Dropout",
+      "config": {
+        "name": "dropout_3",
+        "trainable": true,
+        "dtype": {
+          "module": "keras",
+          "class_name": "DTypePolicy",
+          "config": {
+            "name": "float32"
+          },
+          "registered_name": null
+        },
+        "rate": 0.2,
+        "seed": null,
+        "noise_shape": null
+      },
+      "skipped": true
+    },
+    {
+      "index": 3,
+      "name": "dense_4",
+      "class": "Dense",
+      "config": {
+        "name": "dense_4",
+        "trainable": true,
+        "dtype": {
+          "module": "keras",
+          "class_name": "DTypePolicy",
+          "config": {
+            "name": "float32"
+          },
+          "registered_name": null
+        },
+        "units": 64,
+        "activation": "relu",
+        "use_bias": true,
+        "kernel_initializer": {
+          "module": "keras.initializers",
+          "class_name": "GlorotUniform",
+          "config": {
+            "seed": null
+          },
+          "registered_name": null
+        },
+        "bias_initializer": {
+          "module": "keras.initializers",
+          "class_name": "Zeros",
+          "config": {},
+          "registered_name": null
+        },
+        "kernel_regularizer": null,
+        "bias_regularizer": null,
+        "kernel_constraint": null,
+        "bias_constraint": null
+      },
+      "kernel_var": "FNN_dense_4_kernel_data",
+      "kernel_shape": [
+        128,
+        64
+      ],
+      "bias_var": "FNN_dense_4_bias_data",
+      "bias_shape": [
+        64
+      ]
+    },
+    {
+      "index": 4,
+      "name": "dropout_4",
+      "class": "Dropout",
+      "config": {
+        "name": "dropout_4",
+        "trainable": true,
+        "dtype": {
+          "module": "keras",
+          "class_name": "DTypePolicy",
+          "config": {
+            "name": "float32"
+          },
+          "registered_name": null
+        },
+        "rate": 0.1,
+        "seed": null,
+        "noise_shape": null
+      },
+      "skipped": true
+    },
+    {
+      "index": 5,
+      "name": "dense_5",
+      "class": "Dense",
+      "config": {
+        "name": "dense_5",
+        "trainable": true,
+        "dtype": {
+          "module": "keras",
+          "class_name": "DTypePolicy",
+          "config": {
+            "name": "float32"
+          },
+          "registered_name": null
+        },
+        "units": 32,
+        "activation": "relu",
+        "use_bias": true,
+        "kernel_initializer": {
+          "module": "keras.initializers",
+          "class_name": "GlorotUniform",
+          "config": {
+            "seed": null
+          },
+          "registered_name": null
+        },
+        "bias_initializer": {
+          "module": "keras.initializers",
+          "class_name": "Zeros",
+          "config": {},
+          "registered_name": null
+        },
+        "kernel_regularizer": null,
+        "bias_regularizer": null,
+        "kernel_constraint": null,
+        "bias_constraint": null
+      },
+      "kernel_var": "FNN_dense_5_kernel_data",
+      "kernel_shape": [
+        64,
+        32
+      ],
+      "bias_var": "FNN_dense_5_bias_data",
+      "bias_shape": [
+        32
+      ]
+    },
+    {
+      "index": 6,
+      "name": "dense_6",
+      "class": "Dense",
+      "config": {
+        "name": "dense_6",
+        "trainable": true,
+        "dtype": {
+          "module": "keras",
+          "class_name": "DTypePolicy",
+          "config": {
+            "name": "float32"
+          },
+          "registered_name": null
+        },
+        "units": 1,
+        "activation": "linear",
+        "use_bias": true,
+        "kernel_initializer": {
+          "module": "keras.initializers",
+          "class_name": "GlorotUniform",
+          "config": {
+            "seed": null
+          },
+          "registered_name": null
+        },
+        "bias_initializer": {
+          "module": "keras.initializers",
+          "class_name": "Zeros",
+          "config": {},
+          "registered_name": null
+        },
+        "kernel_regularizer": null,
+        "bias_regularizer": null,
+        "kernel_constraint": null,
+        "bias_constraint": null
+      },
+      "kernel_var": "FNN_dense_6_kernel_data",
+      "kernel_shape": [
+        32,
+        1
+      ],
+      "bias_var": "FNN_dense_6_bias_data",
+      "bias_shape": [
+        1
+      ]
+    }
+  ]
+}
