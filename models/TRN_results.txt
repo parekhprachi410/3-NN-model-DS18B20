@@ -1,0 +1,12 @@
+TRN Training Results
+========================================
+Epochs trained: 41
+Final Train Loss: 0.002374
+Final Val Loss: 0.000333
+Final Train MAE: 0.031760
+Final Val MAE: 0.017525
+
+Validation Metrics (original scale):
+MAE: 0.0873 °C
+RMSE: 0.1019 °C
+MAPE: 0.37 %

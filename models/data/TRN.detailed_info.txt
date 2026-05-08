@@ -1,0 +1,61 @@
+
+==========================================================================================
+MODEL: TRN
+==========================================================================================
+
+Model: "sequential_2"
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━┓
+┃ Layer (type)                              ┃ Output Shape                     ┃          Param # ┃ Trainab… ┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━┩
+│ conv1d (Conv1D)                           │ (None, 59, 32)                   │               96 │    Y     │
+├───────────────────────────────────────────┼──────────────────────────────────┼──────────────────┼──────────┤
+│ conv1d_1 (Conv1D)                         │ (None, 58, 64)                   │            4,160 │    Y     │
+├───────────────────────────────────────────┼──────────────────────────────────┼──────────────────┼──────────┤
+│ flatten_1 (Flatten)                       │ (None, 3712)                     │                0 │    -     │
+├───────────────────────────────────────────┼──────────────────────────────────┼──────────────────┼──────────┤
+│ dense_7 (Dense)                           │ (None, 64)                       │          237,632 │    Y     │
+├───────────────────────────────────────────┼──────────────────────────────────┼──────────────────┼──────────┤
+│ dense_8 (Dense)                           │ (None, 1)                        │               65 │    Y     │
+└───────────────────────────────────────────┴──────────────────────────────────┴──────────────────┴──────────┘
+ Total params: 725,861 (2.77 MB)
+ Trainable params: 241,953 (945.13 KB)
+ Non-trainable params: 0 (0.00 B)
+ Optimizer params: 483,908 (1.85 MB)
+
+Model input shape: (None, 60, 1)
+Model output shape: (None, 1)
+Total layers: 5
+
+------------------------------------------------------------
+DETAILED LAYER INFORMATION
+------------------------------------------------------------
+
+--- Layer: conv1d (Conv1D) ---
+Activation: relu
+Filters: 32, Kernel size: (2,), Strides: (1,), Padding: valid
+Weights:
+  W0: shape=(2, 1, 32), dtype=float32, total=64
+  W1: shape=(32,), dtype=float32, total=32
+
+--- Layer: conv1d_1 (Conv1D) ---
+Activation: relu
+Filters: 64, Kernel size: (2,), Strides: (1,), Padding: valid
+Weights:
+  W0: shape=(2, 32, 64), dtype=float32, total=4096
+  W1: shape=(64,), dtype=float32, total=64
+
+--- Layer: flatten_1 (Flatten) ---
+
+--- Layer: dense_7 (Dense) ---
+Activation: relu
+Units: 64
+Weights:
+  W0: shape=(3712, 64), dtype=float32, total=237568
+  W1: shape=(64,), dtype=float32, total=64
+
+--- Layer: dense_8 (Dense) ---
+Activation: linear
+Units: 1
+Weights:
+  W0: shape=(64, 1), dtype=float32, total=64
+  W1: shape=(1,), dtype=float32, total=1

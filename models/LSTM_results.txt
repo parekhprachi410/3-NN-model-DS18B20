@@ -1,0 +1,12 @@
+LSTM Training Results
+========================================
+Epochs trained: 22
+Final Train Loss: 0.008122
+Final Val Loss: 0.000706
+Final Train MAE: 0.063014
+Final Val MAE: 0.026117
+
+Validation Metrics (original scale):
+MAE: 0.5061 °C
+RMSE: 0.5126 °C
+MAPE: 2.15 %

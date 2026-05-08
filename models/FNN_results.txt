@@ -1,0 +1,12 @@
+FNN Training Results
+========================================
+Epochs trained: 21
+Final Train Loss: 0.002071
+Final Val Loss: 0.003539
+Final Train MAE: 0.029605
+Final Val MAE: 0.059360
+
+Validation Metrics (original scale):
+MAE: 1.1139 °C
+RMSE: 1.1151 °C
+MAPE: 4.74 %
